@@ -1,0 +1,292 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="dfd-level0" name="DFD Level 0">
+    <mxGraphModel dx="868" dy="530" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Process: Apartment Management System -->
+        <mxCell id="system" value="0. Apartment Management System" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="280" y="220" width="300" height="120" as="geometry"/>
+        </mxCell>
+
+        <!-- Tenant -->
+        <mxCell id="tenant" value="Tenant" style="shape=ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="60" y="120" width="120" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Manager/Admin -->
+        <mxCell id="manager" value="Manager/Admin" style="shape=ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="60" y="320" width="140" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Owner -->
+        <mxCell id="owner" value="Owner/Landlord" style="shape=ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="620" y="120" width="150" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Maintenance Staff -->
+        <mxCell id="maint" value="Maintenance Staff" style="shape=ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="620" y="320" width="150" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Bank/Payment Gateway -->
+        <mxCell id="bank" value="Bank / Payment Gateway" style="shape=ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="320" y="400" width="190" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Flows: Tenant <-> System -->
+        <mxCell id="flow_tenant_to_sys" edge="1" value="Requests, Rent, Info" parent="1" style="endArrow=classic;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="tenant" target="system"/>
+        </mxCell>
+
+        <mxCell id="flow_sys_to_tenant" edge="1" value="Bills, Status, Confirmation" parent="1" style="endArrow=classic;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="system" target="tenant"/>
+        </mxCell>
+
+        <!-- Flows: Manager <-> System -->
+        <mxCell id="flow_manager_to_sys" edge="1" value="Management Updates" parent="1" style="endArrow=classic;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="manager" target="system"/>
+        </mxCell>
+
+        <mxCell id="flow_sys_to_manager" edge="1" value="Reports, Lists" parent="1" style="endArrow=classic;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="system" target="manager"/>
+        </mxCell>
+
+        <!-- Flows: Owner <-> System -->
+        <mxCell id="flow_owner_to_sys" edge="1" value="Feedback, Info" parent="1" style="endArrow=classic;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="owner" target="system"/>
+        </mxCell>
+
+        <mxCell id="flow_sys_to_owner" edge="1" value="Income & Occupancy Report" parent="1" style="endArrow=classic;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="system" target="owner"/>
+        </mxCell>
+
+        <!-- Flows: Maintenance Staff <-> System -->
+        <mxCell id="flow_maint_to_sys" edge="1" value="Work Status" parent="1" style="endArrow=classic;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="maint" target="system"/>
+        </mxCell>
+
+        <mxCell id="flow_sys_to_maint" edge="1" value="Job Assignment" parent="1" style="endArrow=classic;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="system" target="maint"/>
+        </mxCell>
+
+        <!-- Flows: Bank <-> System -->
+        <mxCell id="flow_sys_to_bank" edge="1" value="Payment Request" parent="1" style="endArrow=classic;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="system" target="bank"/>
+        </mxCell>
+
+        <mxCell id="flow_bank_to_sys" edge="1" value="Payment Confirmation" parent="1" style="endArrow=classic;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="bank" target="system"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram id="dfd-level1" name="DFD Level 1">
+    <mxGraphModel dx="868" dy="530" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="10" parent="0"/>
+
+        <!-- External Entities -->
+        <mxCell id="tenant_e" value="Tenant" style="shape=ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="10">
+          <mxGeometry x="40" y="80" width="100" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="manager_e" value="Manager/Admin" style="shape=ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="10">
+          <mxGeometry x="40" y="220" width="120" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="owner_e" value="Owner/Landlord" style="shape=ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="10">
+          <mxGeometry x="840" y="80" width="130" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="maint_e" value="Maintenance Staff" style="shape=ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="10">
+          <mxGeometry x="840" y="220" width="140" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="bank_e" value="Bank / Payment Gateway" style="shape=ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="10">
+          <mxGeometry x="450" y="420" width="170" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Processes -->
+        <mxCell id="p1" value="1.0 Tenant &amp; Lease Management" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="10">
+          <mxGeometry x="220" y="60" width="200" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p2" value="2.0 Apartment &amp; Unit Management" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="10">
+          <mxGeometry x="220" y="180" width="200" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p3" value="3.0 Rent &amp; Billing Management" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="10">
+          <mxGeometry x="220" y="300" width="200" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p4" value="4.0 Maintenance Management" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="10">
+          <mxGeometry x="560" y="180" width="200" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p5" value="5.0 Reporting &amp; Owner Management" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="10">
+          <mxGeometry x="560" y="60" width="220" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- Data Stores -->
+        <mxCell id="d1" value="D1 Tenant Data Store" style="shape=cylinder;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="10">
+          <mxGeometry x="140" y="520" width="140" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="d2" value="D2 Apartment/Unit Data Store" style="shape=cylinder;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="10">
+          <mxGeometry x="320" y="520" width="170" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="d3" value="D3 Rent &amp; Billing Data Store" style="shape=cylinder;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="10">
+          <mxGeometry x="520" y="520" width="180" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="d4" value="D4 Maintenance Request Data Store" style="shape=cylinder;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="10">
+          <mxGeometry x="720" y="520" width="200" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="d5" value="D5 Owner &amp; Report Data Store" style="shape=cylinder;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="10">
+          <mxGeometry x="910" y="360" width="190" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Flows: Entities to Processes -->
+
+        <!-- Tenant -> 1.0 -->
+        <mxCell id="e1" edge="1" value="Registration, Lease Request" parent="10" style="endArrow=classic;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="tenant_e" target="p1"/>
+        </mxCell>
+
+        <!-- 1.0 -> Tenant -->
+        <mxCell id="e2" edge="1" value="Lease Approval, Details" parent="10" style="endArrow=classic;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="p1" target="tenant_e"/>
+        </mxCell>
+
+        <!-- Manager -> 1.0 -->
+        <mxCell id="e3" edge="1" value="Approval Instruction" parent="10" style="endArrow=classic;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="manager_e" target="p1"/>
+        </mxCell>
+
+        <!-- Manager -> 2.0 -->
+        <mxCell id="e4" edge="1" value="Apartment Info" parent="10" style="endArrow=classic;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="manager_e" target="p2"/>
+        </mxCell>
+
+        <!-- Tenant -> 3.0 -->
+        <mxCell id="e5" edge="1" value="Rent Payment Info" parent="10" style="endArrow=classic;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="tenant_e" target="p3"/>
+        </mxCell>
+
+        <!-- Tenant -> 4.0 -->
+        <mxCell id="e6" edge="1" value="Maintenance Request" parent="10" style="endArrow=classic;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="tenant_e" target="p4"/>
+        </mxCell>
+
+        <!-- Bank <-> 3.0 -->
+        <mxCell id="e7" edge="1" value="Payment Request" parent="10" style="endArrow=classic;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="p3" target="bank_e"/>
+        </mxCell>
+
+        <mxCell id="e8" edge="1" value="Payment Confirmation" parent="10" style="endArrow=classic;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="bank_e" target="p3"/>
+        </mxCell>
+
+        <!-- Maint Staff <-> 4.0 -->
+        <mxCell id="e9" edge="1" value="Job Assignment" parent="10" style="endArrow=classic;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="p4" target="maint_e"/>
+        </mxCell>
+
+        <mxCell id="e10" edge="1" value="Work Status" parent="10" style="endArrow=classic;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="maint_e" target="p4"/>
+        </mxCell>
+
+        <!-- Owner <-> 5.0 -->
+        <mxCell id="e11" edge="1" value="Report Request" parent="10" style="endArrow=classic;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="owner_e" target="p5"/>
+        </mxCell>
+
+        <mxCell id="e12" edge="1" value="Reports" parent="10" style="endArrow=classic;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="p5" target="owner_e"/>
+        </mxCell>
+
+        <!-- Flows: Processes to Data Stores -->
+
+        <!-- 1.0 <-> D1 -->
+        <mxCell id="f1" edge="1" value="Tenant, Lease Data" parent="10" style="endArrow=classic;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="p1" target="d1"/>
+        </mxCell>
+
+        <!-- 2.0 <-> D2 -->
+        <mxCell id="f2" edge="1" value="Apartment, Unit Data" parent="10" style="endArrow=classic;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="p2" target="d2"/>
+        </mxCell>
+
+        <!-- 3.0 <-> D3 -->
+        <mxCell id="f3" edge="1" value="Invoices, Payments, Dues" parent="10" style="endArrow=classic;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="p3" target="d3"/>
+        </mxCell>
+
+        <!-- 4.0 <-> D4 -->
+        <mxCell id="f4" edge="1" value="Requests, Status" parent="10" style="endArrow=classic;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="p4" target="d4"/>
+        </mxCell>
+
+        <!-- 5.0 reads from D1-D4 and writes to D5 -->
+        <mxCell id="f5" edge="1" value="Read Data for Reports" parent="10" style="endArrow=classic;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="d1" target="p5"/>
+        </mxCell>
+
+        <mxCell id="f6" edge="1" value="" parent="10" style="endArrow=classic;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="d2" target="p5"/>
+        </mxCell>
+
+        <mxCell id="f7" edge="1" value="" parent="10" style="endArrow=classic;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="d3" target="p5"/>
+        </mxCell>
+
+        <mxCell id="f8" edge="1" value="" parent="10" style="endArrow=classic;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="d4" target="p5"/>
+        </mxCell>
+
+        <mxCell id="f9" edge="1" value="Store Generated Reports" parent="10" style="endArrow=classic;html=1;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="p5" target="d5"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
